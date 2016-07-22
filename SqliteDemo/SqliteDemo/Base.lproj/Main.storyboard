@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-xh-BX6">
+                                <rect key="frame" x="220" y="30" width="32" height="30"/>
+                                <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="btnAddDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DM1-fA-vrU"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tCE-e2-EhP">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RLb-Ai-mUV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="UXC-VA-wG9"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fb-rc-bLo">
+                                <rect key="frame" x="10" y="30" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="mTF-kw-OQa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Fb-rc-bLo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="CFF-7S-EBU"/>
+                            <constraint firstItem="YG4-xh-BX6" firstAttribute="centerY" secondItem="8Fb-rc-bLo" secondAttribute="centerY" id="CfE-th-cJA"/>
+                            <constraint firstAttribute="trailing" secondItem="tCE-e2-EhP" secondAttribute="trailing" id="GCG-Ge-itE"/>
+                            <constraint firstItem="8Fb-rc-bLo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="NfO-rI-bwP"/>
+                            <constraint firstItem="YG4-xh-BX6" firstAttribute="leading" secondItem="8Fb-rc-bLo" secondAttribute="trailing" constant="10" id="Shy-sc-gYP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tCE-e2-EhP" secondAttribute="bottom" id="Xth-HP-ujb"/>
+                            <constraint firstItem="tCE-e2-EhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fpg-kj-f3d"/>
+                            <constraint firstItem="tCE-e2-EhP" firstAttribute="top" secondItem="8Fb-rc-bLo" secondAttribute="bottom" constant="10" id="gTm-I4-IMH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAdd" destination="YG4-xh-BX6" id="h9g-tF-V04"/>
+                        <outlet property="tbvMessage" destination="tCE-e2-EhP" id="g3V-Xv-28n"/>
+                        <outlet property="textField" destination="8Fb-rc-bLo" id="4Li-mb-hUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="317"/>
+        </scene>
+    </scenes>
+</document>
